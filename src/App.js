@@ -6,22 +6,24 @@ import ValueContext from "./ValueContext";
 
 function App() {
   // let [number, setNumber] = useState(45);
-  let value = 81;
+  let value = useState(48);
+
+  // let value = 81;
   return (
-    // <ValueContext.Provider value={value}>
-    <div className="App">
-      <Parent
-      //  num={number}
-      />
-      {/* <button
+    <ValueContext.Provider value={value}>
+      <div className="App">
+        <Parent
+        //  num={number}
+        />
+        {/* <button
           onClick={() => {
             setNumber(++number);
           }}
         >
           Update Number
         </button> */}
-    </div>
-    // </ValueContext.Provider>
+      </div>
+    </ValueContext.Provider>
   );
 }
 
